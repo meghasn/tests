@@ -13,4 +13,8 @@ https://leetcode.com/problems/combination-sum-ii/solution/
 # longest increasing path in a matrix
 https://leetcode.com/problems/longest-increasing-path-in-a-matrix/
 
+# paint house 2
+https://leetcode.com/problems/paint-house-ii/
+
+
 
