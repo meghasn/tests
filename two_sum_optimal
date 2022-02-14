@@ -1,0 +1,42 @@
+#time m+n,space h, iiterative therefore can break once found, does not have to traverse entire tree
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def __init__(self):
+        self.flag=False
+        self.hset=set()
+    def twoSumBSTs(self, root1: Optional[TreeNode], root2: Optional[TreeNode], target: int) -> bool:
+        self.helper(root1,1,target)
+        self.helper(root2,2,target)
+        return self.flag
+    def helper(self,root,treeno,target):
+        st=[]
+        while (root is not None or len(st)!=0) and self.flag==False:
+            while root:
+                st.append(root)
+                root=root.left
+            temp=st.pop()
+            if treeno==1:
+                
+                if target-temp.val not in self.hset:
+                    self.hset.add(target-temp.val)
+                    
+            if treeno==2:
+                if temp.val in self.hset:
+                    
+                    self.flag=True
+                    break
+            
+            
+            root=temp.right
+            
+        #logic
+        
+        
+        
+                
+      
