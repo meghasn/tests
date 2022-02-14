@@ -17,4 +17,8 @@ https://leetcode.com/problems/longest-increasing-path-in-a-matrix/
 https://leetcode.com/problems/paint-house-ii/
 
 
+# two sum bst
+https://leetcode.com/problems/two-sum-bsts/
 
+# find the element in a contaminated binary tree
+https://leetcode.com/problems/find-elements-in-a-contaminated-binary-tree/
