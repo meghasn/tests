@@ -2,6 +2,9 @@
 test.py- to count connected components in an undirected graph
 test trie- to count words which has a common prefix
 
+# permutation in strings
+https://leetcode.com/problems/permutation-in-string/
+
 # binary tree maximum path
 https://leetcode.com/problems/binary-tree-maximum-path-sum/
 
