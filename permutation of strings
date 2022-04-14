@@ -1,0 +1,22 @@
+#bruteforce- creating all the permutation and compare, gives tle, sort and compare- tle
+#optimal-time-(l1+26*l1*(l2-l1)), space=(1)
+import copy
+class Solution:
+    def __init__(self):
+        self.res=[]
+        self.visited=[0 for i in range(26)]
+    def checkInclusion(self, s1: str, s2: str) -> bool:
+        for i in s1:
+            self.visited[ord(i)-ord('a')]+=1
+      
+        
+   
+        for i in range(len(s2)-len(s1)+1):
+            temp=s2[i:i+len(s1)]
+            temp_vis=[0 for i in range(26)]
+            for j in temp:
+                temp_vis[ord(j)-ord('a')]+=1
+            
+            if self.visited==temp_vis:
+                return True
+        return False

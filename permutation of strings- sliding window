@@ -1,0 +1,49 @@
+#bruteforce- creating all the permutation and compare, gives tle, sort and compare- tle
+#optimal-time-(l1+(l2-l1), space=(1)
+import copy
+class Solution:
+    def __init__(self):
+        self.res=[]
+        self.visited=[0 for i in range(26)]
+    def checkInclusion(self, s1: str, s2: str) -> bool:
+        if len(s1)>len(s2):
+            return False
+        smap1=[0 for i in range(26)]
+        smap2=[0 for i in range(26)]
+        for i in range(len(s1)):
+            smap1[ord(s1[i])-ord('a')]+=1
+            smap2[ord(s2[i])-ord('a')]+=1
+        count=0
+        for i in range(26):
+            if smap1[i]==smap2[i]:
+                count+=1
+        for i in range(len(s2)-len(s1)):
+            r=ord(s2[i+len(s1)])-ord('a')#incoming element
+            l=ord(s2[i])-ord('a')#outgoing element
+            if count==26:
+                return True
+            smap2[r]+=1
+            if smap2[r]==smap1[r]:
+                count+=1
+            elif smap2[r]==smap1[r]+1:
+                count-=1
+            smap2[l]-=1
+            if smap2[l]==smap1[l]:
+                count+=1
+            elif smap2[l]==smap1[l]-1:
+                count-=1
+                
+        return count==26
+            
+            
+                
+            
+
+                    
+                    
+                    
+                    
+           
+            
+   
+        
