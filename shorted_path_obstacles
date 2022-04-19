@@ -1,0 +1,35 @@
+#time-m*n*k space-m*n*k
+from collections import deque
+class Solution:
+    def shortestPath(self, grid: List[List[int]], k: int) -> int:
+        m=len(grid)
+        n=len(grid[0])
+        visited=[[[False for i in range(k+1)] for j in range(n)] for z in range(m)]
+        print(visited)
+        dirs=[[0,1],[0,-1],[1,0],[-1,0]]
+        q=deque()
+        q.append([0,0,k])
+        visited[0][0][k]=True
+        print(q)
+        lev=0
+        while q:
+            size=len(q)
+            for i in range(size):
+                curr=q.popleft()
+                if curr[0]==m-1 and curr[1]==n-1:
+                    return lev
+                for j in dirs:
+                    x=curr[0]+j[0]
+                    y=curr[1]+j[1]
+                    if x>=0 and y>=0 and x<m and y<n:
+                        
+                        
+                        K=curr[2]-grid[x][y]
+                        
+                        if K>=0 and visited[x][y][K]==False:
+                            
+                            q.append([x,y,K])
+                            visited[x][y][K]=True
+            lev+=1
+        return -1
+        
