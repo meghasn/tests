@@ -1,0 +1,18 @@
+#n*logn,n
+class Solution:
+    def longestStrChain(self, words: List[str]) -> int:
+        hmap2={}
+        words=sorted(words,key=lambda el:len(el))
+        for i in words:
+            hmap2[i]=1
+        max_l=1
+        for i in words:
+            
+            for j in range(len(i)):
+                string=i[:j]+i[j+1:]
+                if string in hmap2.keys():
+                    hmap2[i]=hmap2[string]+1
+                    max_l=max(max_l,hmap2[i])
+
+        return max_l
+        
