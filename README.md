@@ -5,6 +5,9 @@ test trie- to count words which has a common prefix
 # permutation in strings
 https://leetcode.com/problems/permutation-in-string/
 
+# longest string chain
+https://leetcode.com/problems/longest-string-chain/submissions/
+
 # binary tree maximum path
 https://leetcode.com/problems/binary-tree-maximum-path-sum/
 
