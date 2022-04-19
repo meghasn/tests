@@ -14,7 +14,8 @@ https://leetcode.com/problems/binary-tree-maximum-path-sum/
 # combination sum 2
 https://leetcode.com/problems/combination-sum-ii/solution/
 
-
+# shortest path with obstacles
+https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination/submissions/
 
 # longest increasing path in a matrix
 https://leetcode.com/problems/longest-increasing-path-in-a-matrix/
